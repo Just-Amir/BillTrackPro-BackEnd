@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY BillTrackPro.sln ./
+COPY BillTrackPro.API/BillTrackPro.API.csproj BillTrackPro.API/
+COPY BillTrackPro.Application/BillTrackPro.Application.csproj BillTrackPro.Application/
+COPY BillTrackPro.Domain/BillTrackPro.Domain.csproj BillTrackPro.Domain/
+COPY BillTrackPro.Infrastructure/BillTrackPro.Infrastructure.csproj BillTrackPro.Infrastructure/
+
+RUN dotnet restore BillTrackPro.API/BillTrackPro.API.csproj
+
+# Copy everything else
+COPY . .
+
+# Enable Hot Reload
+ENV DOTNET_USE_POLLING_FILE_WATCHER=1
+ENV ASPNETCORE_ENVIRONMENT=Development
+
+# Run with Watch
+WORKDIR /app/BillTrackPro.API
+ENTRYPOINT ["dotnet", "watch", "run", "--non-interactive", "--urls=http://0.0.0.0:8080"]
