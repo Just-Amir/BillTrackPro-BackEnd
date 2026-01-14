@@ -212,9 +212,8 @@ namespace BillTrackPro.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -228,180 +227,310 @@ namespace BillTrackPro.Infrastructure.Migrations
                             Id = 1,
                             Amount = 12450.32m,
                             ClientId = 1,
-                            DateIssued = new DateTime(2023, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-001",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2026, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2026-001",
+                            Status = 1
                         },
                         new
                         {
                             Id = 2,
                             Amount = 3450.00m,
                             ClientId = 2,
-                            DateIssued = new DateTime(2023, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-002",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2026, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2026-002",
+                            Status = 0
                         },
                         new
                         {
                             Id = 3,
-                            Amount = 890.00m,
+                            Amount = 8900.00m,
                             ClientId = 3,
-                            DateIssued = new DateTime(2023, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-003",
-                            Status = "Overdue"
+                            DateIssued = new DateTime(2025, 12, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-003",
+                            Status = 1
                         },
                         new
                         {
                             Id = 4,
                             Amount = 2100.00m,
                             ClientId = 4,
-                            DateIssued = new DateTime(2023, 10, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-004",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-004",
+                            Status = 1
                         },
                         new
                         {
                             Id = 5,
                             Amount = 5600.00m,
                             ClientId = 5,
-                            DateIssued = new DateTime(2023, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-005",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2025, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-005",
+                            Status = 2
                         },
                         new
                         {
                             Id = 6,
-                            Amount = 10420.00m,
+                            Amount = 15420.00m,
                             ClientId = 6,
-                            DateIssued = new DateTime(2023, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-006",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-006",
+                            Status = 1
                         },
                         new
                         {
                             Id = 7,
-                            Amount = 1500.00m,
+                            Amount = 4500.00m,
                             ClientId = 7,
-                            DateIssued = new DateTime(2023, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-007",
-                            Status = "Overdue"
+                            DateIssued = new DateTime(2025, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-007",
+                            Status = 1
                         },
                         new
                         {
                             Id = 8,
-                            Amount = 3200.00m,
+                            Amount = 7200.00m,
                             ClientId = 8,
-                            DateIssued = new DateTime(2023, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-008",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-008",
+                            Status = 1
                         },
                         new
                         {
                             Id = 9,
-                            Amount = 750.00m,
+                            Amount = 3750.00m,
                             ClientId = 1,
-                            DateIssued = new DateTime(2023, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-009",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-009",
+                            Status = 1
                         },
                         new
                         {
                             Id = 10,
                             Amount = 9800.00m,
                             ClientId = 2,
-                            DateIssued = new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-010",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2025, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-010",
+                            Status = 0
                         },
                         new
                         {
                             Id = 11,
-                            Amount = 450.00m,
+                            Amount = 2450.00m,
                             ClientId = 9,
-                            DateIssued = new DateTime(2023, 10, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-011",
-                            Status = "Overdue"
+                            DateIssued = new DateTime(2025, 8, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-011",
+                            Status = 1
                         },
                         new
                         {
                             Id = 12,
                             Amount = 16700.00m,
                             ClientId = 10,
-                            DateIssued = new DateTime(2023, 10, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-012",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-012",
+                            Status = 1
                         },
                         new
                         {
                             Id = 13,
                             Amount = 25000.00m,
                             ClientId = 11,
-                            DateIssued = new DateTime(2023, 10, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-013",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-013",
+                            Status = 1
                         },
                         new
                         {
                             Id = 14,
-                            Amount = 1200.00m,
+                            Amount = 6200.00m,
                             ClientId = 12,
-                            DateIssued = new DateTime(2023, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-014",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2025, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-014",
+                            Status = 0
                         },
                         new
                         {
                             Id = 15,
-                            Amount = 3400.00m,
+                            Amount = 8400.00m,
                             ClientId = 13,
-                            DateIssued = new DateTime(2023, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-015",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-015",
+                            Status = 1
                         },
                         new
                         {
                             Id = 16,
-                            Amount = 8900.00m,
+                            Amount = 11900.00m,
                             ClientId = 14,
-                            DateIssued = new DateTime(2023, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-016",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-016",
+                            Status = 1
                         },
                         new
                         {
                             Id = 17,
-                            Amount = 450.00m,
+                            Amount = 1450.00m,
                             ClientId = 15,
-                            DateIssued = new DateTime(2023, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-017",
-                            Status = "Overdue"
+                            DateIssued = new DateTime(2025, 5, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-017",
+                            Status = 2
                         },
                         new
                         {
                             Id = 18,
-                            Amount = 2100.00m,
+                            Amount = 4100.00m,
                             ClientId = 1,
-                            DateIssued = new DateTime(2023, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-018",
-                            Status = "Paid"
+                            DateIssued = new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-018",
+                            Status = 1
                         },
                         new
                         {
                             Id = 19,
-                            Amount = 300.00m,
+                            Amount = 3300.00m,
                             ClientId = 3,
-                            DateIssued = new DateTime(2023, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-019",
-                            Status = "Overdue"
+                            DateIssued = new DateTime(2025, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-019",
+                            Status = 1
                         },
                         new
                         {
                             Id = 20,
-                            Amount = 4600.00m,
+                            Amount = 7600.00m,
                             ClientId = 5,
-                            DateIssued = new DateTime(2023, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-2024-020",
-                            Status = "Pending"
+                            DateIssued = new DateTime(2025, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-020",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Amount = 9200.00m,
+                            ClientId = 6,
+                            DateIssued = new DateTime(2025, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-021",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Amount = 5500.00m,
+                            ClientId = 8,
+                            DateIssued = new DateTime(2025, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-022",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Amount = 12300.00m,
+                            ClientId = 10,
+                            DateIssued = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-023",
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Amount = 8800.00m,
+                            ClientId = 11,
+                            DateIssued = new DateTime(2025, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceNumber = "INV-2025-024",
+                            Status = 1
+                        });
+                });
+
+            modelBuilder.Entity("BillTrackPro.Domain.Entities.UserProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AvatarUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BrandColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyLogoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SecondaryColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaxId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Timezone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserProfiles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AvatarUrl = "",
+                            BrandColor = "#0F172A",
+                            City = "San Francisco",
+                            CompanyLogoUrl = "",
+                            CompanyName = "TechFlow Solutions LLC",
+                            Country = "United States",
+                            Email = "alex@billcorp.com",
+                            FullName = "Alex Morgan",
+                            Phone = "+1 (555) 000-0000",
+                            SecondaryColor = "#F59E0B",
+                            StreetAddress = "450 Enterprise Blvd, Suite 200",
+                            TaxId = "US-987654321",
+                            Timezone = "Eastern Time (US & Canada) (GMT-05:00)",
+                            Title = "Senior Product Manager",
+                            ZipCode = "94105"
                         });
                 });
 
