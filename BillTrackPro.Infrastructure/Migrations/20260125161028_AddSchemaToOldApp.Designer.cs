@@ -4,6 +4,7 @@ using BillTrackPro.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BillTrackPro.Infrastructure.Migrations
 {
     [DbContext(typeof(BillTrackDbContext))]
-    partial class BillTrackDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260125161028_AddSchemaToOldApp")]
+    partial class AddSchemaToOldApp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

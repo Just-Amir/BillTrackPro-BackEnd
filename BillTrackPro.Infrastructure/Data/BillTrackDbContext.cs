@@ -18,6 +18,8 @@ public class BillTrackDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.HasDefaultSchema("BillTrack");
+
         modelBuilder.Entity<Invoice>()
             .Property(i => i.Amount)
             .HasColumnType("decimal(18,2)");
