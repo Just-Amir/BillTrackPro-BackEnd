@@ -32,8 +32,7 @@ builder.Services.AddCors(options =>
 
 // DbContext
 builder.Services.AddDbContext<BillTrackDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), x => 
-        x.MigrationsHistoryTable("__EFMigrationsHistory", "BillTrack")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Dependency Injection
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
